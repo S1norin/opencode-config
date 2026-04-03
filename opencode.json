@@ -1,0 +1,81 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "Blackcat": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Blackcat",
+      "options": {
+        "baseURL": "http://localhost:11434/v1",
+        "parallelToolCalls": true,
+        "structuredOutputs": true
+      },
+      "models": {
+        "Current Deplyoed Model": {
+          "capabilities": { 
+            "toolUse": true, 
+            "reasoning": true 
+          },
+          "variants": {
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "low": {
+              "reasoningEffort": "low"
+            }
+          }
+        }
+      }
+    },
+    "Borzaya": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Borzaya",
+      "options": {
+        "baseURL": "https://borzaya.raman.crazedns.ru/v1",
+        "parallelToolCalls": true,
+        "structuredOutputs": true
+      },
+      "models": {
+        "Current Deplyoed Model": {
+          "capabilities": { 
+            "toolUse": true, 
+            "reasoning": true 
+          },
+          "variants": {
+            "high": {
+              "reasoningEffort": "high"
+            },
+            "medium": {
+              "reasoningEffort": "medium"
+            },
+            "low": {
+              "reasoningEffort": "low"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "permission": {
+    "read": "allow",
+    "list": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "question": "allow",
+    "edit": "ask",
+    "write": "ask",
+    "patch": "ask",
+    "bash": "ask",
+    "webfetch": "ask"
+  },
+
+  "mcp": {
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
+    }
+  }
+}
