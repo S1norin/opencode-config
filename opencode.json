@@ -15,6 +15,7 @@
             "toolUse": true, 
             "reasoning": true 
           },
+          "reprtition_penalty": 1.1,
           "variants": {
             "high": {
               "reasoningEffort": "high"
